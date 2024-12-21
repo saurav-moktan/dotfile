@@ -1,0 +1,38 @@
+#
+#  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ 
+# ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ 
+# ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
+# ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
+# ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
+# ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝
+#
+general.import = ["~/.config/alacritty/ayu_dark.toml"]
+
+[window]
+decorations_theme_variant = "dark"
+opacity = 0.9
+padding = {x = 5, y = 5}
+blur = true
+decorations = "none"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
