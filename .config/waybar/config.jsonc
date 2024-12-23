@@ -1,0 +1,110 @@
+//  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗          ██╗███████╗ ██████╗ ███╗   ██╗ ██████╗
+// ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝          ██║██╔════╝██╔═══██╗████╗  ██║██╔════╝
+// ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗         ██║███████╗██║   ██║██╔██╗ ██║██║
+// ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║    ██   ██║╚════██║██║   ██║██║╚██╗██║██║
+// ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝    ╚█████╔╝███████║╚██████╔╝██║ ╚████║╚██████╗
+//  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝      ╚════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝
+
+{
+  "position": "top",
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "margin": 4,
+  "modules-right": [
+    "pulseaudio",
+    "power-profiles-daemon",
+    "battery",
+    "battery#bat2",
+    "backlight",
+    "cpu",
+    "memory",
+    "temperature",
+    "network",
+    "tray",
+    "clock",
+  ],
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": " ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""],
+    },
+    "on-click": "pavucontrol",
+  },
+  "power-profiles-daemon": {
+    "format": "Power: {icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "<span foreground='#64748b'></span>",
+      "performance": "<span foreground='#ef4444'></span>",
+      "balanced": "<span foreground='#3b82f6'> </span>",
+      "power-saver": "<span foreground='#22c55e'> </span>",
+    },
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{capacity}% {icon}",
+    "format-critical": "{capacity}% {icon}",
+    "format-warning": "capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-full": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+  },
+  "battery#bat2": {
+    "bat": "BAT2",
+  },
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": true,
+  },
+  "memory": {
+    "format": "{}% ",
+  },
+  "temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format-critical": "{temperatureC}°C {icon}",
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""],
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+  },
+
+  "tray": {
+    "spacing": 10,
+  },
+  "clock": {
+    "format": "{:%I:%M %p}  ",
+    "format-alt": "{:%a %Y-%m-%d}",
+    "tooltip-format": "<big>{:%Y %B %p}</big>\n<tt><small>{calendar}</small></tt>",
+  },
+}
