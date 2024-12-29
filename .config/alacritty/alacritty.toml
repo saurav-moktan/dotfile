@@ -11,7 +11,7 @@ general.import = ["~/.config/alacritty/ayu_dark.toml"]
 [window]
 decorations_theme_variant = "dark"
 opacity = 0.9
-padding = {x = 5, y = 5}
+padding = {x = 10, y = 5}
 blur = true
 decorations = "none"
 
