@@ -19,7 +19,6 @@ window#waybar {
   color: @overlay0;
   transition-property: background-color;
   transition-duration: 0.1s;
-  /*border-bottom: 1px solid @overlay1;*/
 }
 
 #window {
@@ -81,18 +80,13 @@ button:hover {
   padding-left: 4px;
   padding-right: 4px;
 }
-#tray {
-  border-bottom: 3px solid white;
-}
 
 #clock {
   color: @maroon;
-  border-bottom: 2px solid @maroon;
 }
 
 #clock.date {
   color: @mauve;
-  border-bottom: 2px solid @mauve;
 }
 
 #clock:hover {
@@ -101,12 +95,10 @@ button:hover {
 
 #pulseaudio {
   color: @blue;
-  border-bottom: 2px solid @blue;
 }
 
 #network {
-  color: @yellow;
-  border-bottom: 2px solid @yellow;
+  color: #f9e2af;
 }
 
 #idle_inhibitor {
@@ -120,31 +112,25 @@ button:hover {
 
 #battery {
   color: @green;
-  border-bottom: 2px solid @green;
 }
 
 #power-profiles-daemon {
-  border-bottom: 2px solid @gray;
 }
 
 #backlight {
   color: @gray;
-  border-bottom: 2px solid #808080;
 }
 
 #cpu {
   color: @red;
-  border-bottom: 2px solid @red;
 }
 
 #memory {
   color: @peach;
-  border-bottom: 2px solid @peach;
 }
 
 #temperature {
   color: @blue;
-  border-bottom: 2px solid @blue;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
