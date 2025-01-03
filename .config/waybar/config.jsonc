@@ -22,8 +22,8 @@
     "tray",
     "clock",
   ],
+
   "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
     "format": "{volume}% {icon} {format_source}",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
@@ -31,16 +31,17 @@
     "format-source": " ",
     "format-source-muted": "",
     "format-icons": {
-      "headphone": "",
+      "headphone": "",
       "hands-free": "",
       "headset": "",
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""],
+      "default": ["🔈", "🔉", "🔊"],
     },
     "on-click": "pavucontrol",
   },
+
   "power-profiles-daemon": {
     "format": "Power: {icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -58,10 +59,10 @@
       "critical": 15,
     },
     "format": "{capacity}% {icon}",
-    "format-critical": "{capacity}% {icon}",
-    "format-warning": "capacity}% {icon}",
+    "format-critical": "<span foreground='#ef4444'>{capacity}% </span>",
+    "format-warning": "<span foreground='#ef4444'>{capacity}% {icon}</span>",
     "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
     "format-full": "{capacity}% {icon}",
     "format-icons": ["", "", "", "", ""],
@@ -78,25 +79,25 @@
     "format": "{usage}% ",
     "tooltip": true,
   },
+
   "memory": {
     "format": "{}% ",
   },
+
   "temperature": {
-    // "thermal-zone": 2,
-    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
     "format-critical": "{temperatureC}°C {icon}",
     "format": "{temperatureC}°C {icon}",
     "format-icons": ["", "", ""],
   },
+
   "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-wifi": "{signalStrength}% ",
     "format-ethernet": "{ipaddr}/{cidr} ",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "format-alt": "{ifname}: {essid} {ipaddr}/{cidr}",
   },
 
   "tray": {
@@ -106,5 +107,14 @@
     "format": "{:%I:%M %p}  ",
     "format-alt": "{:%a %Y-%m-%d}",
     "tooltip-format": "<big>{:%Y %B %p}</big>\n<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "format": {
+        "months": "<span color='#ff6699'><b>{}</b></span>",
+        "days": "<span color='#cdd6f4'><b>{}</b></span>",
+        "weekdays": "<span color='#7CD37C'><b>{}</b></span>",
+        "today": "<span color='#ffcc66'><b>{}</b></span>",
+      },
+    },
   },
 }
