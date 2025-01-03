@@ -5,6 +5,10 @@
 # ███████╗███████║██║  ██║    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
 # ╚══════╝╚══════╝╚═╝  ╚═╝     ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ 
 
+
+# *- running fastfetch *-
+fastfetch
+
 # -*- PATH -*-
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -64,8 +68,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # -*- Aliases -*-
-alias c='clear' 
-alias wireshark='sudo wireshark'
 alias cat='bat'
 alias ls='eza --no-filesize --grid --color=always --icons=always --no-user'
 
